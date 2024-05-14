@@ -14,7 +14,7 @@ Data Description
 We choose to analyze with publicly available [survey data of BRFSS in 2022](https://www.cdc.gov/brfss/annual_data/annual_2022.html) which consist of 445132 records among 328 variables . While most of the features in the dataset are associated with survey background or health condition not related to diabetes, we are only using small segments of them.
 
 # EDA
-<img width="468" alt="image" src="https://github.com/YannisCS/Diabetes-Prediction/assets/34790986/13b8faf8-9cba-45e2-8207-835bae493deb">
+<img width="468" alt="image" src="https://github.com/YannisCS/Diabetes-Prediction/assets/34790986/13b8faf8-9cba-45e2-8207-835bae493deb">  
 From the heatmap we look at the Diabetes column can find out some attributes that are highly correlated to the predict label. Self-evaluated general health attributes have the most positive correlation, meaning when people think they are health they tend to be health.
 
 # Feature Engineering & Selection
