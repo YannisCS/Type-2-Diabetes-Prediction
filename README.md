@@ -15,6 +15,7 @@ We choose to analyze with publicly available [survey data of BRFSS in 2022](http
 
 # EDA
 <img width="468" alt="image" src="https://github.com/YannisCS/Diabetes-Prediction/assets/34790986/13b8faf8-9cba-45e2-8207-835bae493deb">  
+
 From the heatmap we look at the Diabetes column can find out some attributes that are highly correlated to the predict label. Self-evaluated general health attributes have the most positive correlation, meaning when people think they are health they tend to be health.
 
 # Feature Engineering & Selection
@@ -22,7 +23,8 @@ There are two steps of feature selection throughout the process. First, we chose
 
 We used PCA analysis not to extract features, but to decide which factors contributed the most to the diabetes variable. Looking at the PC variable indices, we discover that BMI and number of drinks are the least associated variables, which supports the visualization's results. Other three non-related variables are mental health condition, smoking habit, and asthma history.
 
-Another method used for feature selection is filter method. A subset of features is chosen by filter method in accordance with how they relate to the target variable, that PCA does not take into consideration. Selection is independent of any algorithm based on machine learning. Conversely, filter methods use statistical tests to find how "relevant" the features are to the output. The results show that Asthma and Gender are least related to the target variable, which also supports the visualization. Other three non-related variables are mental health condition, drinking and smoking habit.
+Another method used for feature selection is filter method. A subset of features is chosen by filter method in accordance with how they relate to the target variable, that PCA does not take into consideration. Selection is independent of any algorithm based on machine learning. Conversely, filter methods use statistical tests to find how "relevant" the features are to the output. The results show that Asthma and Gender are least related to the target variable, which also supports the visualization. Other three non-related variables are mental health condition, drinking and smoking habit.  
+
 <img width="1090" alt="image" src="https://github.com/YannisCS/Diabetes-Prediction/assets/34790986/6df6401b-000f-45c5-bba4-4049395498b1">
 
 ## Recommended features
@@ -32,10 +34,13 @@ age, gender, education level, income level, exercise habit, self-recognized heal
 # Model Performace
 Naive Bayes has a higher accuracy compared to Decision Tree, and it demonstrates slightly higher precision for class label 1 compared to Decision Tree. Decision Tree exhibits significantly higher recall for class label 1 compared to Naive Bayes and it achieves a higher F1-score, indicating better overall performance in terms of precision and recall trade-off.
 
-Considering the emphasis on detecting class label 1, the Decision Tree model appears to be more suitable due to its significantly higher recall and higher F1-score for this class. However, it's important to consider other factors such as computational resources, interpretability, and the specific requirements of the task before making a final decision.
-<img width="746" alt="image" src="https://github.com/YannisCS/Diabetes-Prediction/assets/34790986/b0c77e03-845b-4d55-9998-2ce55e76a7e0">
-<img width="416" alt="image" src="https://github.com/YannisCS/Diabetes-Prediction/assets/34790986/a6d7198f-b4c8-4d2b-8d8e-5e330504eda9">
-<img width="245" alt="image" src="https://github.com/YannisCS/Diabetes-Prediction/assets/34790986/78c2a7fb-e5e6-4610-987b-2514831eed52">
+Considering the emphasis on detecting class label 1, the Decision Tree model appears to be more suitable due to its significantly higher recall and higher F1-score for this class. However, it's important to consider other factors such as computational resources, interpretability, and the specific requirements of the task before making a final decision.  
+
+<img width="746" alt="image" src="https://github.com/YannisCS/Diabetes-Prediction/assets/34790986/b0c77e03-845b-4d55-9998-2ce55e76a7e0">  
+
+<img width="416" alt="image" src="https://github.com/YannisCS/Diabetes-Prediction/assets/34790986/a6d7198f-b4c8-4d2b-8d8e-5e330504eda9">  
+
+<img width="245" alt="image" src="https://github.com/YannisCS/Diabetes-Prediction/assets/34790986/78c2a7fb-e5e6-4610-987b-2514831eed52">  
 
 When reach to predict Diabetes, we debated about should we care about type I error more or type II error more. A type I error in medical area can lead to unnecessary treatments, surgeries, or emotional distress. In such cases, precision is crucial to minimize the number of false positives. While for diseases like sepsis, meningitis, or acute myocardial infarction, missing a diagnosis can be fatal. Recall is crucial to ensure that as many true positives as possible are detected.
 
